@@ -1,0 +1,14 @@
+#include <iostream>
+
+
+int main() {
+	setlocale(LC_ALL, "RU");
+	int currentDay, currentMonth, currentYear, clientDayBirth, clientMonthBirth, clientYearBirth;
+	std::cout << "Введите свою дату рождения (день месяц год): "; std::cin >> clientDayBirth >> clientMonthBirth >> clientYearBirth;
+	std::cout << "Введите сегодняшнюю дату (день месяц год): "; std::cin >> currentDay >> currentMonth >> currentYear;
+
+	if (currentYear - clientYearBirth < 18) std::cout << "Нельзя";
+	else if (currentYear - clientYearBirth > 18) std::cout << "Можно";
+	else if (currentMonth > clientMonthBirth or (currentMonth == clientMonthBirth and currentDay > clientDayBirth)) std::cout << "Можно";
+	else std::cout << "Нельзя";
+}
