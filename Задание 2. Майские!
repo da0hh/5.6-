@@ -1,0 +1,18 @@
+#include <iostream>
+
+
+int main() {
+	setlocale(LC_ALL, "RU");
+    int day;
+    std::cout << "Введите номер дня в мае: "; std::cin >> day;
+
+    if (day % 7 == 0 or day % 7 == 6) {
+        std::cout << "Выходной" << std::endl;
+    }
+    else {
+        if (day >= 1 and day <= 5 or day >= 8 and day <= 10) 
+            std::cout << "Выходной" << std::endl;
+        else std::cout << "Рабочий день" << std::endl;
+    }
+}
+
