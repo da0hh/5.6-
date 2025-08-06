@@ -1,0 +1,12 @@
+#include <iostream>
+
+
+int main() {
+	setlocale(LC_ALL, "RU");
+	int speed; int height;
+	std::cout << "Введите скорость и высоту полета: "; std::cin >> speed >> height;
+	if (speed > 750 and speed < 850) std::cout << "Скорость в порядке\n";
+	else std::cout << "Скорость нарушена\n";
+	if (height > 9000 and height < 9500) std::cout << "Высота в порядке\n"; 
+	else std::cout << "Высота нарушена\n";
+}
