@@ -1,0 +1,19 @@
+#include <iostream>
+
+
+int main() {
+	setlocale(LC_ALL, "RU");
+    int day, startMonth;
+    std::cout << "Введите номер дня в мае: "; std::cin >> day;
+    std::cout << "Введите начало месяца (1-понедельник -- 7-воскресенье): "; std::cin >> startMonth;
+
+    if (startMonth < 1 or startMonth > 7) std::cout << "Error";
+
+    day += 7 - startMonth;
+
+    if (day % 7 == 0 or day % 7 == 6 or (day >= 1 and day <= 5 or day >= 8 and day <= 10)) {
+        std::cout << "Выходной\n";
+    }
+    else std::cout << "рабочий";
+}
+
