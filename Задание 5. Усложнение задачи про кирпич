@@ -1,0 +1,19 @@
+#include <iostream>
+
+
+int main() {
+	setlocale(LC_ALL, "RU");
+	int a, b, c, m, n, k;
+	std::cout << "Введите размеры первой коробки (a b c): "; std::cin >> a >> b >> c;
+	std::cout << "Введите размеры второй коробки (m n k): "; std::cin >> m >> n >> k;
+	
+	if (a <= 0 or b <= 0 or c <= 0 or m <= 0 or n <= 0 or k <= 0) {
+		std::cout << "Eror\n";
+		return 0;
+	    if ((a <= n or a <= m or a <= k) and (a <= k or a <= m or a <= n)) std::cout << "Первая коробка помещается во вторую.\n";
+		else if ((b <= n or b <= k or b <= m) and (b <= n or b <= k or b <= m)) std::cout << "Первая коробка помещается во вторую.\n";
+		else if ((b >= n or b >= k or b >= m) and (b >= n or b >= k or b >= m)) std::cout << "Вторая коробка помещается в первую\n";
+		else if ((a >= n or a >= m or a >= k) and (a >= k or a >= m or a >= n)) std::cout << "Вторая коробка помещается в первую.\n";
+		else std::cout << "Error";
+	}
+}
